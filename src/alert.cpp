@@ -19,8 +19,12 @@ using namespace std;
 map<uint256, CAlert> mapAlerts;
 CCriticalSection cs_mapAlerts;
 
-static const char* pszMainKey = "040184710fa689ad5023690c80f3a49c8f13f8d45b8c857fbcbc8bc4a8e4d3eb4b10f4d4604fa08dce601aaf0f470216fe1b51850b4acf21b179c45070ac7b03a9";
-static const char* pszTestKey = "04302390343f91cc401d56d68b123028bf52e5fca1939df127f63c6467cdf9c8e2c14b61104cf817d0b780da337893ecc4aaff1309e536162dabbdb45200ca2b0a";
+//existing keys
+//static const char* pszMainKey = "040184710fa689ad5023690c80f3a49c8f13f8d45b8c857fbcbc8bc4a8e4d3eb4b10f4d4604fa08dce601aaf0f470216fe1b51850b4acf21b179c45070ac7b03a9";
+//static const char* pszTestKey = "04302390343f91cc401d56d68b123028bf52e5fca1939df127f63c6467cdf9c8e2c14b61104cf817d0b780da337893ecc4aaff1309e536162dabbdb45200ca2b0a";
+
+static const char* pszMainKey = "04294417eaa862e88533de236d540629763f07b616efe25536ae01ef48025df11a00a20e0625f8a377377f165bc0ea58a70b94f2da083c2e97be1fa96424ffe3f8";
+static const char* pszTestKey = "048b9f6df4e22f29b33cb131a2d8e6b1e63da338de8ce14b09512f0f409a38e2f27f2588a6ed0beff3dbe15581e7d2c82780217cbacd0297d40538d9299d06a217";
 
 void CUnsignedAlert::SetNull()
 {
