@@ -2,7 +2,7 @@
 name: "zenexcoin-win-0.1"
 enable_cache: true
 suites:
-- "bionic"
+- "precise"
 architectures:
 - "amd64"
 packages:
