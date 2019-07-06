@@ -13,7 +13,7 @@ packages:
 - "faketime"
 reference_datetime: "2011-01-30 00:00:00"
 remotes:
-- "url": "https://github.com/zenexcoin-project/zenexcoin.git"
+- "url": "https://github.com/Ashokhicas/zenexcoin.git"
   "dir": "zenexcoin"
 files:
 - "qt-win32-4.8.5-gitian-r8.zip"
