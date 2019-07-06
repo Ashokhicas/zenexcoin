@@ -21,7 +21,6 @@ packages:
 - "zip"
 - "ca-certificates"
 - "python"
-- "rename"
 remotes:
 - "url": "https://github.com/Ashokhicas/zenexcoin.git"
   "dir": "zenexcoin"
