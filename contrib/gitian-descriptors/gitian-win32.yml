@@ -54,6 +54,7 @@ script: |
   export TZ=UTC
   ln -s $STAGING $HOME/qt
   $HOME/staging/host/bin/qmake -spec unsupported/win32-g++-cross MINIUPNPC_LIB_PATH=$STAGING MINIUPNPC_INCLUDE_PATH=$STAGING BDB_LIB_PATH=$STAGING BDB_INCLUDE_PATH=$STAGING BOOST_LIB_PATH=$STAGING BOOST_INCLUDE_PATH=$STAGING BOOST_LIB_SUFFIX=-mt-s BOOST_THREAD_LIB_SUFFIX=_win32-mt-s OPENSSL_LIB_PATH=$STAGING OPENSSL_INCLUDE_PATH=$STAGING QRENCODE_LIB_PATH=$STAGING QRENCODE_INCLUDE_PATH=$STAGING USE_QRCODE=1 INCLUDEPATH=$STAGING DEFINES=BOOST_THREAD_USE_LIB BITCOIN_NEED_QT_PLUGINS=1 QMAKE_LRELEASE=lrelease QMAKE_CXXFLAGS=-frandom-seed=zenexcoin USE_BUILD_INFO=1 USE_SSE2=1
+  echo $MAKEOPTS
   make $MAKEOPTS
   $HOST-strip release/zenexcoin-qt.exe
   cp release/zenexcoin-qt.exe $OUTDIR/
@@ -62,7 +63,7 @@ script: |
   export LD_PRELOAD=/usr/lib/faketime/libfaketime.so.1
   export FAKETIME=$REFERENCE_DATETIME
   export TZ=UTC
-  make -f makefile.linux-mingw $MAKEOPTS DEPSDIR=$STAGING zenexcoind.exe USE_UPNP=0 DEBUGFLAGS="-frandom-seed=zenexcoin" USE_SSE2=1
+  make -f makefile.linux-mingw VERBOSE=1 $MAKEOPTS DEPSDIR=$STAGING zenexcoind.exe USE_UPNP=0 DEBUGFLAGS="-frandom-seed=zenexcoin" USE_SSE2=1
   $HOST-strip zenexcoind.exe
   mkdir $OUTDIR/daemon
   cp zenexcoind.exe $OUTDIR/daemon
